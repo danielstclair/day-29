@@ -1,0 +1,30 @@
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+  background-color: #ccc;
+  font-family: Futura; }
+
+div {
+  margin: 0 50px;
+  background-color: #eee; }
+  div table {
+    margin: 0 auto; }
+    div table th {
+      font-size: 1.5em;
+      width: 33.333%;
+      text-shadow: 1px 1px 2px black; }
+    div table .red {
+      color: red; }
+    div table .white {
+      color: white; }
+    div table .blue {
+      color: blue; }
+    div table tr {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 30px; }
+      div table tr a {
+        text-decoration: none;
+        color: black; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>The 50 States</title>
+	<link rel="stylesheet" type="text/css" href="styles/css/main.css">
+</head>
+<body>
+	<div id="div" ng-controller="statesControl">
+		<div >
+			Search by State : 
+			<input ng-model="filter" id="filter" placeholder="type search here..." type="text">
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th><a href="#" class="red" ng-click="stateFlip()">States</a></th>
+					<th><a href="#" class="white" ng-click="stateFlip()">Abbr.</a></th>
+					<th><a href="#" class="blue" ng-click="stateFlip()">Wiki</a></th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr class="tr" ng-repeat="value in statesCopy">
+				<td>{{ value.name }}</td>
+				<td>{{ value.abbreviation }}</td>
+				<td><a ng-href="http://en.wikipedia.org/wiki/{{value.name}}" target="_blank">{{value.name}} Wiki</a></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/lodash/lodash.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="scripts/controllers.js"></script>
+</body>
+</html>
