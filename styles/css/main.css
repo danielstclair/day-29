@@ -8,6 +8,15 @@ body {
 div {
   margin: 0 50px;
   background-color: #eee; }
+  div h3 {
+    padding: 20px 0 15px;
+    margin: 0; }
+  div .filter {
+    width: 100%;
+    max-width: 450px;
+    height: 2em;
+    font-size: .9em;
+    margin-bottom: 20px; }
   div table {
     margin: 0 auto; }
     div table th {

@@ -5,8 +5,8 @@ angular.module('app.controller', []).controller('statesControl', function($scope
 	.success(function(response){
 		for(var i=0; i<response.length; i++){
 			if(response[i].name && response[i].abbreviation){
-				$scope.states.push(response[i]);
-				$scope.statesCopy.push(response[i]);
+				$scope.states.unshift(response[i]);
+				$scope.statesCopy.unshift(response[i]);
 			}
 		}
 	}).error(function(err){
