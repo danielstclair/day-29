@@ -9,6 +9,10 @@ angular.module('app.controller', []).controller('statesControl', function($scope
 				$scope.statesCopy.unshift(response[i]);
 			}
 		}
+		$scope.states = _.sortBy(response, function(element){
+			return element.name;
+		})
+		$scope.states = $scope.statesCopy;
 	}).error(function(err){
 		console.log(err);
 		});
@@ -23,7 +27,8 @@ angular.module('app.controller', []).controller('statesControl', function($scope
 			$scope.statesCopy = _.filter($scope.states,
 				function(element){
 					console.log('filter inside: ' + $scope.filter);
-					return element.name.toLowerCase().indexOf($scope.filter.toLocaleLowerCase()) > -1 || element.abbreviation.toLowerCase().indexOf($scope.filter.toLocaleLowerCase()) > -1;
+					return element.name.toLowerCase().indexOf($scope.filter.toLocaleLowerCase()) === 0 || 
+					element.abbreviation.toLowerCase().indexOf($scope.filter.toLocaleLowerCase()) === 0;
 		});
 	});
 })
